@@ -1,0 +1,522 @@
+{
+  "schema_version": 1,
+  "project": "Harbor · 合成项目",
+  "inventory": [
+    "tasks/*.md",
+    "roadmap.md"
+  ],
+  "tasks": [
+    {
+      "id": "R1",
+      "title": "需求与边界",
+      "lane": "planning",
+      "source": "tasks/R1.md",
+      "expected_state": "done",
+      "summary": "纯合成示例：需求与边界。状态与验收清单分别统计。",
+      "next": "按已记录范围补充验证；本示例不执行真实任务。",
+      "as_of": "2026-10-20",
+      "refs": [
+        {
+          "path": "tasks/R1.md",
+          "match": "State: done",
+          "sha256": "ca69fd88896dbeaffcde82da01c1d70584be7f3fa157a2dec0cf909cb2868f9f"
+        }
+      ]
+    },
+    {
+      "id": "B1",
+      "title": "本地存储",
+      "lane": "implementation",
+      "source": "tasks/B1.md",
+      "expected_state": "done",
+      "summary": "纯合成示例：本地存储。状态与验收清单分别统计。",
+      "next": "按已记录范围补充验证；本示例不执行真实任务。",
+      "as_of": "2026-10-20",
+      "refs": [
+        {
+          "path": "tasks/B1.md",
+          "match": "State: done",
+          "sha256": "ca69fd88896dbeaffcde82da01c1d70584be7f3fa157a2dec0cf909cb2868f9f"
+        }
+      ]
+    },
+    {
+      "id": "B2",
+      "title": "查询界面",
+      "lane": "implementation",
+      "source": "tasks/B2.md",
+      "expected_state": "done",
+      "summary": "纯合成示例：查询界面。状态与验收清单分别统计。",
+      "next": "按已记录范围补充验证；本示例不执行真实任务。",
+      "as_of": "2026-10-20",
+      "refs": [
+        {
+          "path": "tasks/B2.md",
+          "match": "State: done",
+          "sha256": "ca69fd88896dbeaffcde82da01c1d70584be7f3fa157a2dec0cf909cb2868f9f"
+        }
+      ]
+    },
+    {
+      "id": "I1",
+      "title": "接口整合",
+      "lane": "implementation",
+      "source": "tasks/I1.md",
+      "expected_state": "in-progress",
+      "summary": "纯合成示例：接口整合。状态与验收清单分别统计。",
+      "next": "按已记录范围补充验证；本示例不执行真实任务。",
+      "as_of": "2026-10-20",
+      "refs": [
+        {
+          "path": "tasks/I1.md",
+          "match": "State: in-progress",
+          "sha256": "3606e43935c7de6b52d4faeb4dde3d6f5ce068ddd6360b151e2b512247847729"
+        }
+      ]
+    },
+    {
+      "id": "Q1",
+      "title": "并发与恢复",
+      "lane": "implementation",
+      "source": "tasks/Q1.md",
+      "expected_state": "in-progress",
+      "summary": "纯合成示例：并发与恢复。状态与验收清单分别统计。",
+      "next": "按已记录范围补充验证；本示例不执行真实任务。",
+      "as_of": "2026-10-20",
+      "refs": [
+        {
+          "path": "tasks/Q1.md",
+          "match": "State: in-progress",
+          "sha256": "3606e43935c7de6b52d4faeb4dde3d6f5ce068ddd6360b151e2b512247847729"
+        }
+      ]
+    },
+    {
+      "id": "Q2",
+      "title": "可访问性",
+      "lane": "design",
+      "source": "tasks/Q2.md",
+      "expected_state": "open",
+      "summary": "纯合成示例：可访问性。状态与验收清单分别统计。",
+      "next": "按已记录范围补充验证；本示例不执行真实任务。",
+      "as_of": "2026-10-20",
+      "refs": [
+        {
+          "path": "tasks/Q2.md",
+          "match": "State: open",
+          "sha256": "cd1a1899cb104590a7cd844bcef441e595d6a7ed4c847b7d610d80568c579d3b"
+        }
+      ]
+    },
+    {
+      "id": "D1",
+      "title": "发布说明",
+      "lane": "planning",
+      "source": "tasks/D1.md",
+      "expected_state": "open",
+      "summary": "纯合成示例：发布说明。状态与验收清单分别统计。",
+      "next": "按已记录范围补充验证；本示例不执行真实任务。",
+      "as_of": "2026-10-20",
+      "refs": [
+        {
+          "path": "tasks/D1.md",
+          "match": "State: open",
+          "sha256": "cd1a1899cb104590a7cd844bcef441e595d6a7ed4c847b7d610d80568c579d3b"
+        }
+      ]
+    },
+    {
+      "id": "S1",
+      "title": "公开发布",
+      "lane": "planning",
+      "source": "tasks/S1.md",
+      "expected_state": "open",
+      "summary": "纯合成示例：公开发布。状态与验收清单分别统计。",
+      "next": "按已记录范围补充验证；本示例不执行真实任务。",
+      "as_of": "2026-10-20",
+      "refs": [
+        {
+          "path": "tasks/S1.md",
+          "match": "State: open",
+          "sha256": "cd1a1899cb104590a7cd844bcef441e595d6a7ed4c847b7d610d80568c579d3b"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "id": "R1-E1",
+      "task": "R1",
+      "at": "2026-10-01",
+      "precision": "day",
+      "time_basis": "recorded",
+      "stages": [
+        "authorization"
+      ],
+      "result": "recorded",
+      "title": "记录示例需求",
+      "summary": "这是一条虚构的项目记录，用于演示图表和证据定位。",
+      "scope": "合成示例；不代表真实执行、工时或交付。",
+      "actor": "示例执行者",
+      "refs": [
+        {
+          "path": "tasks/R1.md",
+          "match": "R1-E1 |",
+          "sha256": "0f6182da883eb9184d6ff0e4b5a1cb34688608651b0056de474e49a8bbf2a39a"
+        }
+      ]
+    },
+    {
+      "id": "R1-E2",
+      "task": "R1",
+      "at": "2026-10-02",
+      "precision": "day",
+      "time_basis": "recorded",
+      "stages": [
+        "handoff"
+      ],
+      "result": "passed",
+      "title": "需求边界确认",
+      "summary": "这是一条虚构的项目记录，用于演示图表和证据定位。",
+      "scope": "合成示例；不代表真实执行、工时或交付。",
+      "actor": "示例执行者",
+      "refs": [
+        {
+          "path": "tasks/R1.md",
+          "match": "R1-E2 |",
+          "sha256": "ba63ae63b2b0e53c240557695336c661451aa46f7b29a532e1928879c844a39a"
+        }
+      ]
+    },
+    {
+      "id": "B1-E1",
+      "task": "B1",
+      "at": "2026-10-03",
+      "precision": "day",
+      "time_basis": "recorded",
+      "stages": [
+        "implementation"
+      ],
+      "result": "recorded",
+      "title": "建立存储模型",
+      "summary": "这是一条虚构的项目记录，用于演示图表和证据定位。",
+      "scope": "合成示例；不代表真实执行、工时或交付。",
+      "actor": "示例执行者",
+      "refs": [
+        {
+          "path": "tasks/B1.md",
+          "match": "B1-E1 |",
+          "sha256": "e00fe2b6b16a62eff09e4a541e86865adf54b8e1ce7f16f66f37085b49a084fd"
+        }
+      ]
+    },
+    {
+      "id": "B1-E2",
+      "task": "B1",
+      "at": "2026-10-04",
+      "precision": "day",
+      "time_basis": "recorded",
+      "stages": [
+        "test"
+      ],
+      "result": "failed",
+      "title": "异常恢复反例失败",
+      "summary": "这是一条虚构的项目记录，用于演示图表和证据定位。",
+      "scope": "合成示例；不代表真实执行、工时或交付。",
+      "actor": "示例执行者",
+      "refs": [
+        {
+          "path": "tasks/B1.md",
+          "match": "B1-E2 |",
+          "sha256": "4045593fd8f31d749223252dc9864dd1eee9661edbe127e433c493319c079f93"
+        }
+      ]
+    },
+    {
+      "id": "B1-E3",
+      "task": "B1",
+      "at": "2026-10-06",
+      "precision": "day",
+      "time_basis": "recorded",
+      "stages": [
+        "fix"
+      ],
+      "result": "passed",
+      "title": "恢复修复并复验",
+      "summary": "这是一条虚构的项目记录，用于演示图表和证据定位。",
+      "scope": "合成示例；不代表真实执行、工时或交付。",
+      "actor": "示例执行者",
+      "refs": [
+        {
+          "path": "tasks/B1.md",
+          "match": "B1-E3 |",
+          "sha256": "60873e2bb05f404d48697e50d489f8081d78a22150b5d239f4390777e70c31ee"
+        }
+      ]
+    },
+    {
+      "id": "B2-E1",
+      "task": "B2",
+      "at": "2026-10-05",
+      "precision": "day",
+      "time_basis": "recorded",
+      "stages": [
+        "design"
+      ],
+      "result": "recorded",
+      "title": "界面结构确认",
+      "summary": "这是一条虚构的项目记录，用于演示图表和证据定位。",
+      "scope": "合成示例；不代表真实执行、工时或交付。",
+      "actor": "示例执行者",
+      "refs": [
+        {
+          "path": "tasks/B2.md",
+          "match": "B2-E1 |",
+          "sha256": "b1e9bed69da71647e868dcd54d69cf276a64ff1ae6f24a6cbaa0cb710c3eb04f"
+        }
+      ]
+    },
+    {
+      "id": "B2-E2",
+      "task": "B2",
+      "at": "2026-10-08",
+      "precision": "day",
+      "time_basis": "recorded",
+      "stages": [
+        "test"
+      ],
+      "result": "passed",
+      "title": "查询与空状态通过",
+      "summary": "这是一条虚构的项目记录，用于演示图表和证据定位。",
+      "scope": "合成示例；不代表真实执行、工时或交付。",
+      "actor": "示例执行者",
+      "refs": [
+        {
+          "path": "tasks/B2.md",
+          "match": "B2-E2 |",
+          "sha256": "b759a7826ac41f50503f29c38826bf475a2fdda4c9e6493cf0c9380dc12ef306"
+        }
+      ]
+    },
+    {
+      "id": "B2-E3",
+      "task": "B2",
+      "at": "2026-10-10",
+      "precision": "day",
+      "time_basis": "recorded",
+      "stages": [
+        "handoff"
+      ],
+      "result": "passed",
+      "title": "查询切片关闭",
+      "summary": "这是一条虚构的项目记录，用于演示图表和证据定位。",
+      "scope": "合成示例；不代表真实执行、工时或交付。",
+      "actor": "示例执行者",
+      "refs": [
+        {
+          "path": "tasks/B2.md",
+          "match": "B2-E3 |",
+          "sha256": "8e749e27083d50f4e8c86a435fb2b45c51da5518199526ba125212770a4ccf9d"
+        }
+      ]
+    },
+    {
+      "id": "I1-E1",
+      "task": "I1",
+      "at": "2026-10-09",
+      "precision": "day",
+      "time_basis": "recorded",
+      "stages": [
+        "implementation"
+      ],
+      "result": "recorded",
+      "title": "接入真实数据流程",
+      "summary": "这是一条虚构的项目记录，用于演示图表和证据定位。",
+      "scope": "合成示例；不代表真实执行、工时或交付。",
+      "actor": "示例执行者",
+      "refs": [
+        {
+          "path": "tasks/I1.md",
+          "match": "I1-E1 |",
+          "sha256": "3f73d70c0b4ff8292722a75db8c401ef6d658da6362ca449acd738063964816e"
+        }
+      ]
+    },
+    {
+      "id": "I1-E2",
+      "task": "I1",
+      "at": "2026-10-13",
+      "precision": "day",
+      "time_basis": "recorded",
+      "stages": [
+        "test"
+      ],
+      "result": "passed",
+      "title": "受影响回归通过",
+      "summary": "这是一条虚构的项目记录，用于演示图表和证据定位。",
+      "scope": "合成示例；不代表真实执行、工时或交付。",
+      "actor": "示例执行者",
+      "refs": [
+        {
+          "path": "tasks/I1.md",
+          "match": "I1-E2 |",
+          "sha256": "723e2a6bfc0927db7a92ec7ef3899b334dc413d226e1e78bdd2b0d4194b266f7"
+        }
+      ]
+    },
+    {
+      "id": "I1-E3",
+      "task": "I1",
+      "at": "2026-10-16",
+      "precision": "day",
+      "time_basis": "recorded",
+      "stages": [
+        "cr"
+      ],
+      "result": "recorded",
+      "title": "等待最终集成审查",
+      "summary": "这是一条虚构的项目记录，用于演示图表和证据定位。",
+      "scope": "合成示例；不代表真实执行、工时或交付。",
+      "actor": "示例执行者",
+      "refs": [
+        {
+          "path": "tasks/I1.md",
+          "match": "I1-E3 |",
+          "sha256": "27e6423dda6854facdd240b7faea47e5e8d8727fa6f3df0edf1e329ca42902c2"
+        }
+      ]
+    },
+    {
+      "id": "Q1-E1",
+      "task": "Q1",
+      "at": "2026-10-12",
+      "precision": "day",
+      "time_basis": "recorded",
+      "stages": [
+        "test"
+      ],
+      "result": "failed",
+      "title": "发现并发恢复反例",
+      "summary": "这是一条虚构的项目记录，用于演示图表和证据定位。",
+      "scope": "合成示例；不代表真实执行、工时或交付。",
+      "actor": "示例执行者",
+      "refs": [
+        {
+          "path": "tasks/Q1.md",
+          "match": "Q1-E1 |",
+          "sha256": "8e92759e013c95251015ff6159635717c09856d42c5b0c9c313cc395a1ed5e79"
+        }
+      ]
+    },
+    {
+      "id": "Q1-E2",
+      "task": "Q1",
+      "at": "2026-10-15",
+      "precision": "day",
+      "time_basis": "recorded",
+      "stages": [
+        "fix"
+      ],
+      "result": "passed",
+      "title": "修复单机反例",
+      "summary": "这是一条虚构的项目记录，用于演示图表和证据定位。",
+      "scope": "合成示例；不代表真实执行、工时或交付。",
+      "actor": "示例执行者",
+      "refs": [
+        {
+          "path": "tasks/Q1.md",
+          "match": "Q1-E2 |",
+          "sha256": "3a55d710774ef22cca005139d81135bf63556c24db2ceb6b8aca5fabed204f4d"
+        }
+      ]
+    },
+    {
+      "id": "Q1-E3",
+      "task": "Q1",
+      "at": "2026-10-18",
+      "precision": "day",
+      "time_basis": "recorded",
+      "stages": [
+        "native"
+      ],
+      "result": "blocked",
+      "title": "双设备资源未就绪",
+      "summary": "这是一条虚构的项目记录，用于演示图表和证据定位。",
+      "scope": "合成示例；不代表真实执行、工时或交付。",
+      "actor": "示例执行者",
+      "refs": [
+        {
+          "path": "tasks/Q1.md",
+          "match": "Q1-E3 |",
+          "sha256": "472d82d655527bd65770608f21698b933196ddf303f5b0762747c905855dde2c"
+        }
+      ]
+    },
+    {
+      "id": "Q2-E1",
+      "task": "Q2",
+      "at": null,
+      "precision": "unknown",
+      "time_basis": "recorded",
+      "stages": [
+        "handoff"
+      ],
+      "result": "deferred",
+      "title": "读屏路径尚未验证",
+      "summary": "这是一条虚构的项目记录，用于演示图表和证据定位。",
+      "scope": "合成示例；不代表真实执行、工时或交付。",
+      "actor": "示例执行者",
+      "refs": [
+        {
+          "path": "tasks/Q2.md",
+          "match": "Q2-E1 |",
+          "sha256": "4c7214ee468a0af02c7bd01800bf2a52ec1a9a06498b699afa4ccc8c399afc13"
+        }
+      ]
+    },
+    {
+      "id": "D1-E1",
+      "task": "D1",
+      "at": "2026-10-17",
+      "precision": "day",
+      "time_basis": "recorded",
+      "stages": [
+        "implementation"
+      ],
+      "result": "recorded",
+      "title": "整理已知限制",
+      "summary": "这是一条虚构的项目记录，用于演示图表和证据定位。",
+      "scope": "合成示例；不代表真实执行、工时或交付。",
+      "actor": "示例执行者",
+      "refs": [
+        {
+          "path": "tasks/D1.md",
+          "match": "D1-E1 |",
+          "sha256": "a50da82abc50510b3c142658f6081a879dbafe189e66571b7c0b03a89df4f10c"
+        }
+      ]
+    },
+    {
+      "id": "D1-E2",
+      "task": "D1",
+      "at": "2026-10-19",
+      "precision": "day",
+      "time_basis": "recorded",
+      "stages": [
+        "cr"
+      ],
+      "result": "recorded",
+      "title": "发布文案待复核",
+      "summary": "这是一条虚构的项目记录，用于演示图表和证据定位。",
+      "scope": "合成示例；不代表真实执行、工时或交付。",
+      "actor": "示例执行者",
+      "refs": [
+        {
+          "path": "tasks/D1.md",
+          "match": "D1-E2 |",
+          "sha256": "68261656ab205b36c384d32a1269ed8f1c083073acbd856d61736d7d56802262"
+        }
+      ]
+    }
+  ]
+}

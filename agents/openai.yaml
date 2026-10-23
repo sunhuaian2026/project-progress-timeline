@@ -1,0 +1,4 @@
+interface:
+  display_name: "项目进度时间轴"
+  short_description: "聚合总体进度和开发时间轴，显示百分比、三主题与可追溯证据"
+  default_prompt: "使用 $project-progress-timeline 核对并刷新当前项目的开发进度时间轴。"

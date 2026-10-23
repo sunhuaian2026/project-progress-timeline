@@ -1,0 +1,107 @@
+{
+  "as_of": "2026-10-20",
+  "headline": "基础能力已就绪，集成验证仍在进行",
+  "summary": "本看板是纯合成示例。需求、存储和查询切片已关闭；接口整合与并发验证尚未完成，完整发布仍开放。",
+  "next": "先补集成反例与设备资源，再复核可访问性及发布范围；不生成未经确认的未来排期。",
+  "current_task": "I1",
+  "execution_label": "合成示例 · 状态、记录和日期均为虚构",
+  "refs": [
+    {
+      "path": "roadmap.md",
+      "match": "本目录所有任务",
+      "sha256": "fffffe77c05d5f696160230f8776a4398c7c6bc65db7d7002bbc0d611fe4ea56"
+    }
+  ],
+  "gates": [
+    "R1",
+    "B1"
+  ],
+  "gates_title": "示例整合前置",
+  "metrics": [
+    {
+      "id": "base",
+      "label": "基础切片",
+      "basis": "state",
+      "task_ids": [
+        "R1",
+        "B1",
+        "B2"
+      ],
+      "note": "仅统计这三张已列任务，3/3不表示产品全部完成。"
+    },
+    {
+      "id": "integration",
+      "label": "整合与质量",
+      "basis": "state",
+      "task_ids": [
+        "I1",
+        "Q1",
+        "Q2"
+      ],
+      "note": "任务关闭以事实源状态为准，部分测试通过不关闭整票。"
+    },
+    {
+      "id": "current",
+      "label": "接口整合验收清单",
+      "basis": "criteria",
+      "task_id": "I1",
+      "note": "复选清单勾选独立于任务最终验收。"
+    }
+  ],
+  "stages": [
+    {
+      "id": "BASE",
+      "title": "需求与基础",
+      "status": "done",
+      "detail": "三张基础票已关闭，示例不代表产品完成率。",
+      "refs": [
+        {
+          "path": "roadmap.md",
+          "match": "BASE：",
+          "sha256": "1bad6d45f3ba04eee668eb6f49ef53a76b1945f1f037931199f0f84a231587bd"
+        }
+      ]
+    },
+    {
+      "id": "BUILD",
+      "title": "整合与验证",
+      "status": "active",
+      "detail": "整合与并发验证仍开放，存在设备验证缺口。",
+      "refs": [
+        {
+          "path": "roadmap.md",
+          "match": "BUILD：",
+          "sha256": "ffac83617d59cc26327d04cd038c36214df4de4703ec295f4d264702187a6a8e"
+        }
+      ]
+    },
+    {
+      "id": "SHIP",
+      "title": "发布准备",
+      "status": "planned",
+      "detail": "文档与支持矩阵需复核，没有明确未来排期。",
+      "refs": [
+        {
+          "path": "roadmap.md",
+          "match": "SHIP：",
+          "sha256": "0c18e24b651a02735af0d0a9ad9887e7a30f7157dbbdeb4b9071849789f27fe2"
+        }
+      ]
+    }
+  ],
+  "blockers": [
+    {
+      "title": "示例双设备资源缺口",
+      "detail": "并发恢复的双设备路径尚未验证，单机结果不外推。",
+      "refs": [
+        {
+          "path": "tasks/Q1.md",
+          "match": "Q1-E3 |",
+          "sha256": "472d82d655527bd65770608f21698b933196ddf303f5b0762747c905855dde2c"
+        }
+      ]
+    }
+  ],
+  "related_sections": [],
+  "scope_note": "纯合成数据；没有真实产品记录。关闭数、复选状态、未知日期和验收边界分别展示。"
+}
