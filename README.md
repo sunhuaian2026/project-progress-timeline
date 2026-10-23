@@ -23,7 +23,26 @@
 
 截图及 `examples/demo/` 全部使用虚构项目数据，不代表真实产品的交付情况。
 
-## 安装为 Codex Skill
+## 一句话安装
+
+把下面这句话发给 Codex Agent：
+
+```text
+帮我安装这个 Skill：https://github.com/sunhuaian2026/project-progress-timeline
+```
+
+安装后，在新会话里说：
+
+```text
+使用 $project-progress-timeline，核对本项目的任务和验收证据，刷新项目进度表。
+```
+
+需要汇报时也可以直接说：“用项目进度 Skill 生成一份结论先行的项目汇报，保留完整进度图表。”
+
+Agent 负责按宿主规则处理安装位置和依赖；已有安装时先检查本地定制。当前已验证 Codex，其他 Agent 宿主的安装与发现机制需分别核实。
+
+<details>
+<summary>手动安装（备用）</summary>
 
 需要 Git 和 Python 3.10+（包括 IANA 时区数据）。在**实际执行 Codex 的主机**上运行：
 
@@ -34,13 +53,9 @@ git clone https://github.com/sunhuaian2026/project-progress-timeline.git \
 
 如果设置了 `CODEX_HOME`，改用 `$CODEX_HOME/skills/project-progress-timeline`。已有同名目录时，先备份并比较本地定制，不直接覆盖。也可从 [Releases](https://github.com/sunhuaian2026/project-progress-timeline/releases) 下载 ZIP，解压后将 `project-progress-timeline` 文件夹放入对应 `skills` 目录。
 
-在新会话中调用：
+</details>
 
-```text
-使用 $project-progress-timeline，核对本项目的任务和验收证据，刷新项目进度表。
-```
-
-Skill 会指导 agent 核实事实，再维护项目自己的 `progress/timeline.json` 与可选 `progress/overview.json`。**它不会自行读取 Git 历史就断定完成，也不是后台任务管理器。** 其他 agent 宿主可读取 `SKILL.md`；其发现和调用机制需分别验证。
+Skill 会指导 Agent 核实事实，再维护项目自己的 `progress/timeline.json` 与可选 `progress/overview.json`。**它不会自行读取 Git 历史就断定完成，也不是后台任务管理器。**
 
 ## 两分钟运行示例
 

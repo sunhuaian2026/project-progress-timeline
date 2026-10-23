@@ -19,9 +19,26 @@ Version 1.1 adds an optional, evidence-backed five-part reporting preface on the
 
 All screenshots and examples are fictional. They contain no real project records.
 
-## Install
+## Install with one sentence
 
-Use Python 3.10+ with IANA timezone data and Git. On the host that actually runs Codex:
+Send this to your Codex agent:
+
+```text
+Install this skill for me: https://github.com/sunhuaian2026/project-progress-timeline
+```
+
+Then start a new conversation and ask:
+
+```text
+Use $project-progress-timeline to review this project's tasks and acceptance evidence, then refresh its progress dashboard.
+```
+
+For reporting, ask for a conclusion-first project report while keeping the complete progress charts. The agent handles the host's installation workflow and checks existing local customizations. Codex has been verified; other agent hosts require separate discovery and installation checks.
+
+<details>
+<summary>Manual installation (fallback)</summary>
+
+Requires Git and Python 3.10+ with IANA timezone data. Run on the host that actually executes Codex:
 
 ```bash
 git clone https://github.com/sunhuaian2026/project-progress-timeline.git \
@@ -30,7 +47,9 @@ git clone https://github.com/sunhuaian2026/project-progress-timeline.git \
 
 If `CODEX_HOME` is configured, use `$CODEX_HOME/skills/project-progress-timeline`. Back up and review existing local customizations before replacing an installation. Alternatively, download a [release ZIP](https://github.com/sunhuaian2026/project-progress-timeline/releases).
 
-In a new Codex conversation, invoke `$project-progress-timeline` and ask it to review project tasks and evidence before refreshing the dashboard. The skill is not a background scheduler, and does not independently infer completion from Git activity. Discovery in other agent hosts must be checked separately.
+</details>
+
+The skill is not a background scheduler and does not independently infer completion from Git activity.
 
 ## Run the example
 
