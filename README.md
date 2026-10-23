@@ -4,7 +4,7 @@
 
 [English](README.en.md) · [数据格式](references/schema.md) · [贡献指南](CONTRIBUTING.md) · [MIT](LICENSE)
 
-适用于 Codex 的本地 Skill，也能直接作为 Python 静态页面生成器使用。运行时仅使用 Python 标准库，无需前端构建或 API 密钥。默认界面为中文。
+采用通用 `SKILL.md` 格式，提供 Codex、Claude Code、Cursor、Zcode 的安装指引，也能直接作为 Python 静态页面生成器使用。运行时仅使用 Python 标准库，无需前端构建或 API 密钥。默认界面为中文。
 
 ![合成项目的总体进度](docs/images/overview.png)
 
@@ -25,21 +25,21 @@
 
 ## 一句话安装
 
-把下面这句话发给 Codex Agent：
+把下面这句话发给你正在使用的 Agent（Codex、Claude Code、Cursor 或 Zcode）：
 
 ```text
-帮我安装这个 Skill：https://github.com/sunhuaian2026/project-progress-timeline
+帮我安装这个 Skill，按当前 Agent 的安装说明执行并验证能被识别：https://github.com/sunhuaian2026/project-progress-timeline
 ```
 
 安装后，在新会话里说：
 
 ```text
-使用 $project-progress-timeline，核对本项目的任务和验收证据，刷新项目进度表。
+使用 project-progress-timeline Skill，核对本项目的任务和验收证据，刷新项目进度表。
 ```
 
 需要汇报时也可以直接说：“用项目进度 Skill 生成一份结论先行的项目汇报，保留完整进度图表。”
 
-Agent 负责按宿主规则处理安装位置和依赖；已有安装时先检查本地定制。当前已验证 Codex，其他 Agent 宿主的安装与发现机制需分别核实。
+Agent 请先读取[安装说明](INSTALL.md)，按当前宿主安装并验证；已有安装先检查本地定制。Codex 已验证安装和渲染，Zcode 已验证 CLI 发现和副本渲染；Claude Code、Cursor 目前完成官方机制核对，完整宿主调用尚未实测。自然语言是安装请求，不是跨宿主统一安装命令。
 
 <details>
 <summary>手动安装（备用）</summary>

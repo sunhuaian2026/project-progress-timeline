@@ -4,7 +4,7 @@ Turn Markdown tasks and acceptance records into an evidence-backed, static proje
 
 [中文说明](README.md) · [Data schema (Chinese)](references/schema.md) · [MIT license](LICENSE)
 
-This is a local Codex skill and a standalone Python renderer. It uses the Python standard library, requires no API keys or frontend build, and ships a Chinese-language interface.
+This uses the portable SKILL.md format with installation guidance for Codex, Claude Code, Cursor and Zcode, and also works as a standalone Python renderer. It uses the Python standard library, requires no API keys or frontend build, and ships a Chinese-language interface.
 
 ![Synthetic project overview](docs/images/overview.png)
 
@@ -21,19 +21,19 @@ All screenshots and examples are fictional. They contain no real project records
 
 ## Install with one sentence
 
-Send this to your Codex agent:
+Send this to your current coding agent (Codex, Claude Code, Cursor or Zcode):
 
 ```text
-Install this skill for me: https://github.com/sunhuaian2026/project-progress-timeline
+Install this skill using the instructions for your current host, and verify discovery: https://github.com/sunhuaian2026/project-progress-timeline
 ```
 
 Then start a new conversation and ask:
 
 ```text
-Use $project-progress-timeline to review this project's tasks and acceptance evidence, then refresh its progress dashboard.
+Use the project-progress-timeline skill to review this project's tasks and acceptance evidence, then refresh its progress dashboard.
 ```
 
-For reporting, ask for a conclusion-first project report while keeping the complete progress charts. The agent handles the host's installation workflow and checks existing local customizations. Codex has been verified; other agent hosts require separate discovery and installation checks.
+For reporting, ask for a conclusion-first project report while keeping the complete progress charts. The agent handles the host's installation workflow and checks existing local customizations. Read [INSTALL.md](INSTALL.md) first. Codex installation/rendering and Zcode CLI discovery/rendering have been checked. Claude Code and Cursor have documented format/directory support, but their complete host invocation has not been tested. A natural-language request is not a universal installation command.
 
 <details>
 <summary>Manual installation (fallback)</summary>
