@@ -60,7 +60,39 @@ def prepare_overview(config, tasks, resolve_refs):
     related = config.get('related_sections',[])
     for section in related:
         group(section['task_ids'],section['title'])
+    report = config.get('report')
+    if report is not None:
+        if not isinstance(report, dict):
+            raise ValueError('report must be an object')
+        def fields(value, keys):
+            if not isinstance(value, dict) or any(not isinstance(value.get(k), str) or not value[k].strip() for k in keys):
+                raise ValueError('Missing or invalid leadership report fields: ' + ', '.join(keys))
+            return {k:value[k] for k in keys}
+        prepared = fields(report, ['title','as_of','period_note','headline','conclusion','label'])
+        prepared['refs'] = resolve_refs(report.get('refs',[]))
+        for section, keys in {
+            'assessments':['label','value','detail'],
+            'outcomes':['title','result','status'],
+            'milestones':['title','status','detail'],
+            'risks':['title','impact','response','owner','checkpoint'],
+            'requests':['kind','title','recommendation','owner','checkpoint'],
+            'next_steps':['result','owner','when','acceptance'],
+        }.items():
+            values=report.get(section,[])
+            if not isinstance(values,list):
+                raise ValueError('Leadership report section must be a list: ' + section)
+            prepared[section]=[]
+            for value in values:
+                item=fields(value,keys)
+                if section in {'outcomes','milestones'} and item['status'] not in {'done','active','open','blocked'}:
+                    raise ValueError('Invalid leadership delivery status')
+                if section=='requests' and item['kind'] not in {'coordination','decision','information'}:
+                    raise ValueError('Invalid leadership request kind')
+                item['refs']=resolve_refs(value.get('refs',[]))
+                prepared[section].append(item)
+        report=prepared
     return {
+        'report': report,
         'current_task':current_id,
         'as_of':config.get('as_of',current.get('as_of','未记录')),
         'headline':config.get('headline','总体进度'),

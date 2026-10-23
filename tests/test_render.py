@@ -132,6 +132,38 @@ class RenderTests(unittest.TestCase):
         metrics = json.loads((self.site / 'manifest.json').read_text())['overall']['metrics']
         self.assertEqual((metrics[0]['done'], metrics[0]['total']), (3, 8))
 
+    def test_report_is_optional_and_keeps_existing_counts(self):
+        self.assertEqual(self.render().returncode, 0)
+        before = json.loads((self.site / 'manifest.json').read_text())['overall']
+        config = self.root / 'progress' / 'overview.json'
+        data = json.loads(config.read_text())
+        data.pop('report')
+        config.write_text(json.dumps(data, ensure_ascii=False))
+        self.assertEqual(self.render().returncode, 0)
+        after = json.loads((self.site / 'manifest.json').read_text())['overall']
+        self.assertEqual(before['metrics'], after['metrics'])
+        self.assertEqual(before['task_source_hashes'], after['task_source_hashes'])
+
+    def test_invalid_report_keeps_previous_output(self):
+        config = self.root / 'progress' / 'overview.json'
+        original = json.loads(config.read_text())
+        self.assertEqual(self.render().returncode, 0)
+        before = (self.site / 'index.html').read_bytes()
+        changes = [
+            lambda r: r.update(refs=[]),
+            lambda r: r['refs'][0].update(sha256='0' * 64),
+            lambda r: r['outcomes'][0].update(status='released'),
+            lambda r: r['requests'][0].update(kind='approval'),
+            lambda r: r.update(headline=''),
+        ]
+        for change in changes:
+            with self.subTest(change=changes.index(change)):
+                data = json.loads(json.dumps(original))
+                change(data['report'])
+                config.write_text(json.dumps(data, ensure_ascii=False))
+                self.assertNotEqual(self.render().returncode, 0)
+                self.assertEqual((self.site / 'index.html').read_bytes(), before)
+
 
 if __name__ == '__main__':
     unittest.main()

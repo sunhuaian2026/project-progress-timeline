@@ -46,3 +46,20 @@
 时间轴以有日期的日分组及独立未知日期组展示，支持逐日/全部开合；原始摘要与证据仍在事件内。默认最近一天展开，已手动开合按日期在当前页面保留；过滤后的标题计数来自当前实际匹配记录。定位某条记录时展开其所属日，不能因折叠而丢失证据入口。
 
 甘特图内嵌于开发时间轴顶部，日记录位于下方；不再提供独立甘特标签。`?view=timeline` 与旧 `?view=gantt` 都打开此板块。从图上的任务/记录点定位到下方目标日，并保留筛选和证据；顶部“查看按天记录”可跳过图表。总体进度页不重复显示图表。
+
+## 首页结论区 report
+
+overview.json 可选 `report` 对象；省略时保持原开发总览。提供时在原首页前置结论、已交付结果、里程碑/偏差、风险/决策、下一步五部分；原首页完整进度内容和侧栏保留在后，不替换、不新增汇报导航。甘特图/按天记录继续在开发时间轴。
+
+必填非空文字：`title`、`as_of`、`period_note`、`headline`、`conclusion`、`label`，以及通过唯一行哈希校验的 `refs`。`label` 可标“合成示例”；as_of是已核验快照截至时间，period_note解释是否具有本期/上期可比口径。
+
+各段是可选数组；每条都须有合法refs及下列非空文字字段，缺段不自动推断为无风险/无需决策：
+
+- assessments：label、value、detail。区分交付就绪、计划偏差和业务成效；不能据关闭数自动得出管理判断。
+- outcomes：title、result、status。status为done/active/open/blocked。
+- milestones：title、status、detail。使用同一状态枚举，不增加未经证实的工期/依赖承诺。
+- risks：title、impact、response、owner、checkpoint。未知责任人/时间用明确文字标出。
+- requests：kind、title、recommendation、owner、checkpoint。kind为coordination/decision/information，对应协调/决策/供知悉。
+- next_steps：result、owner、when、acceptance。时间可为已确认日期或触发条件。
+
+汇报文字与证据的语义一致性由作者及复核者判断；格式校验只保证字段及引用完整，不替代事实核查。页面保留完整证据页，发布前仍应核对整份引用文档的隐私范围。

@@ -103,5 +103,303 @@
     }
   ],
   "related_sections": [],
-  "scope_note": "纯合成数据；没有真实产品记录。关闭数、复选状态、未知日期和验收边界分别展示。"
+  "scope_note": "纯合成数据；没有真实产品记录。关闭数、复选状态、未知日期和验收边界分别展示。",
+  "report": {
+    "title": "Harbor 项目 · 交付状态",
+    "as_of": "2026-10-20",
+    "label": "合成示例",
+    "period_note": "截至当前的状态快照；未指定汇报周期，不推断本周新增或环比变化。",
+    "headline": "基础能力已交付，发布条件尚未齐备。",
+    "conclusion": "本地存储与查询切片已验收；系统集成仍在进行，双设备验证存在资源缺口。当前应先落实验证条件，再复核整体发布范围。",
+    "refs": [
+      {
+        "path": "tasks/B1.md",
+        "match": "State: done",
+        "sha256": "ca69fd88896dbeaffcde82da01c1d70584be7f3fa157a2dec0cf909cb2868f9f"
+      },
+      {
+        "path": "tasks/B2.md",
+        "match": "State: done",
+        "sha256": "ca69fd88896dbeaffcde82da01c1d70584be7f3fa157a2dec0cf909cb2868f9f"
+      },
+      {
+        "path": "tasks/I1.md",
+        "match": "State: in-progress",
+        "sha256": "3606e43935c7de6b52d4faeb4dde3d6f5ce068ddd6360b151e2b512247847729"
+      },
+      {
+        "path": "tasks/Q1.md",
+        "match": "Q1-E3 |",
+        "sha256": "472d82d655527bd65770608f21698b933196ddf303f5b0762747c905855dde2c"
+      },
+      {
+        "path": "tasks/S1.md",
+        "match": "State: open",
+        "sha256": "cd1a1899cb104590a7cd844bcef441e595d6a7ed4c847b7d610d80568c579d3b"
+      }
+    ],
+    "assessments": [
+      {
+        "label": "交付就绪",
+        "value": "部分就绪",
+        "detail": "基础能力已验收，集成与发布仍开放。",
+        "refs": [
+          {
+            "path": "tasks/B1.md",
+            "match": "State: done",
+            "sha256": "ca69fd88896dbeaffcde82da01c1d70584be7f3fa157a2dec0cf909cb2868f9f"
+          },
+          {
+            "path": "tasks/B2.md",
+            "match": "State: done",
+            "sha256": "ca69fd88896dbeaffcde82da01c1d70584be7f3fa157a2dec0cf909cb2868f9f"
+          },
+          {
+            "path": "tasks/I1.md",
+            "match": "State: in-progress",
+            "sha256": "3606e43935c7de6b52d4faeb4dde3d6f5ce068ddd6360b151e2b512247847729"
+          },
+          {
+            "path": "tasks/S1.md",
+            "match": "State: open",
+            "sha256": "cd1a1899cb104590a7cd844bcef441e595d6a7ed4c847b7d610d80568c579d3b"
+          }
+        ]
+      },
+      {
+        "label": "计划偏差",
+        "value": "尚不能判断",
+        "detail": "没有批准交付日期，无法判断是否按期。",
+        "refs": [
+          {
+            "path": "roadmap.md",
+            "match": "SHIP：",
+            "sha256": "0c18e24b651a02735af0d0a9ad9887e7a30f7157dbbdeb4b9071849789f27fe2"
+          }
+        ]
+      },
+      {
+        "label": "业务成效",
+        "value": "尚未衡量",
+        "detail": "示例未提供使用、成本或收入指标。",
+        "refs": [
+          {
+            "path": "roadmap.md",
+            "match": "本目录所有任务",
+            "sha256": "fffffe77c05d5f696160230f8776a4398c7c6bc65db7d7002bbc0d611fe4ea56"
+          }
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "title": "存储基础能力",
+        "status": "done",
+        "result": "存储切片及异常恢复修复已通过验收，具备后续集成基础。",
+        "refs": [
+          {
+            "path": "tasks/B1.md",
+            "match": "State: done",
+            "sha256": "ca69fd88896dbeaffcde82da01c1d70584be7f3fa157a2dec0cf909cb2868f9f"
+          },
+          {
+            "path": "tasks/B1.md",
+            "match": "B1-E3 |",
+            "sha256": "60873e2bb05f404d48697e50d489f8081d78a22150b5d239f4390777e70c31ee"
+          }
+        ]
+      },
+      {
+        "title": "查询与空状态",
+        "status": "done",
+        "result": "查询流程与空状态已验证，查询切片已关闭。",
+        "refs": [
+          {
+            "path": "tasks/B2.md",
+            "match": "State: done",
+            "sha256": "ca69fd88896dbeaffcde82da01c1d70584be7f3fa157a2dec0cf909cb2868f9f"
+          },
+          {
+            "path": "tasks/B2.md",
+            "match": "B2-E2 |",
+            "sha256": "b759a7826ac41f50503f29c38826bf475a2fdda4c9e6493cf0c9380dc12ef306"
+          }
+        ]
+      },
+      {
+        "title": "整体集成与发布",
+        "status": "open",
+        "result": "接口整合仍在进行；当前不把局部完成视为整体验收或发布完成。",
+        "refs": [
+          {
+            "path": "tasks/I1.md",
+            "match": "State: in-progress",
+            "sha256": "3606e43935c7de6b52d4faeb4dde3d6f5ce068ddd6360b151e2b512247847729"
+          },
+          {
+            "path": "tasks/S1.md",
+            "match": "State: open",
+            "sha256": "cd1a1899cb104590a7cd844bcef441e595d6a7ed4c847b7d610d80568c579d3b"
+          }
+        ]
+      }
+    ],
+    "milestones": [
+      {
+        "title": "基础能力",
+        "status": "done",
+        "detail": "存储、查询切片已验收",
+        "refs": [
+          {
+            "path": "tasks/B1.md",
+            "match": "State: done",
+            "sha256": "ca69fd88896dbeaffcde82da01c1d70584be7f3fa157a2dec0cf909cb2868f9f"
+          },
+          {
+            "path": "tasks/B2.md",
+            "match": "State: done",
+            "sha256": "ca69fd88896dbeaffcde82da01c1d70584be7f3fa157a2dec0cf909cb2868f9f"
+          }
+        ]
+      },
+      {
+        "title": "系统集成",
+        "status": "active",
+        "detail": "最终集成审查仍待完成",
+        "refs": [
+          {
+            "path": "tasks/I1.md",
+            "match": "I1-E3 |",
+            "sha256": "27e6423dda6854facdd240b7faea47e5e8d8727fa6f3df0edf1e329ca42902c2"
+          }
+        ]
+      },
+      {
+        "title": "关键验证",
+        "status": "blocked",
+        "detail": "双设备资源尚未就绪",
+        "refs": [
+          {
+            "path": "tasks/Q1.md",
+            "match": "Q1-E3 |",
+            "sha256": "472d82d655527bd65770608f21698b933196ddf303f5b0762747c905855dde2c"
+          }
+        ]
+      },
+      {
+        "title": "发布准备",
+        "status": "open",
+        "detail": "说明与发布边界仍需复核",
+        "refs": [
+          {
+            "path": "tasks/D1.md",
+            "match": "State: open",
+            "sha256": "cd1a1899cb104590a7cd844bcef441e595d6a7ed4c847b7d610d80568c579d3b"
+          },
+          {
+            "path": "tasks/S1.md",
+            "match": "State: open",
+            "sha256": "cd1a1899cb104590a7cd844bcef441e595d6a7ed4c847b7d610d80568c579d3b"
+          }
+        ]
+      }
+    ],
+    "risks": [
+      {
+        "title": "双设备路径缺少验证",
+        "impact": "该场景的验收缺口尚未关闭，单机结果不能外推。",
+        "response": "先明确所需资源与就绪条件，再执行双设备复验。",
+        "owner": "尚未登记",
+        "checkpoint": "资源就绪后",
+        "refs": [
+          {
+            "path": "tasks/Q1.md",
+            "match": "Q1-E3 |",
+            "sha256": "472d82d655527bd65770608f21698b933196ddf303f5b0762747c905855dde2c"
+          }
+        ]
+      },
+      {
+        "title": "可访问性仍未验证",
+        "impact": "当前可用性结论不能覆盖完整读屏体验。",
+        "response": "明确需要承诺的支持范围，再补相应验证。",
+        "owner": "尚未登记",
+        "checkpoint": "发布范围复核时",
+        "refs": [
+          {
+            "path": "tasks/Q2.md",
+            "match": "Q2-E1 |",
+            "sha256": "4c7214ee468a0af02c7bd01800bf2a52ec1a9a06498b699afa4ccc8c399afc13"
+          },
+          {
+            "path": "tasks/Q2.md",
+            "match": "State: open",
+            "sha256": "cd1a1899cb104590a7cd844bcef441e595d6a7ed4c847b7d610d80568c579d3b"
+          }
+        ]
+      }
+    ],
+    "requests": [
+      {
+        "kind": "coordination",
+        "title": "明确双设备验证的资源责任人",
+        "recommendation": "建议先落实验证资源与就绪条件，取得验证结果后再复核发布范围。暂无需要上级批准的交付日期。",
+        "owner": "协调负责人待指定",
+        "checkpoint": "责任人与资源条件明确后回报",
+        "refs": [
+          {
+            "path": "tasks/Q1.md",
+            "match": "Q1-E3 |",
+            "sha256": "472d82d655527bd65770608f21698b933196ddf303f5b0762747c905855dde2c"
+          }
+        ]
+      }
+    ],
+    "next_steps": [
+      {
+        "result": "补齐接口整合验收",
+        "owner": "尚未登记",
+        "when": "集成候选稳定后",
+        "acceptance": "完成当前尚未关闭的整合验收项。",
+        "refs": [
+          {
+            "path": "tasks/I1.md",
+            "match": "State: in-progress",
+            "sha256": "3606e43935c7de6b52d4faeb4dde3d6f5ce068ddd6360b151e2b512247847729"
+          }
+        ]
+      },
+      {
+        "result": "完成双设备路径复验",
+        "owner": "尚未登记",
+        "when": "双设备资源就绪后",
+        "acceptance": "取得对应场景的双设备验证证据。",
+        "refs": [
+          {
+            "path": "tasks/Q1.md",
+            "match": "Q1-E3 |",
+            "sha256": "472d82d655527bd65770608f21698b933196ddf303f5b0762747c905855dde2c"
+          }
+        ]
+      },
+      {
+        "result": "复核发布与支持边界",
+        "owner": "尚未登记",
+        "when": "关键验收结果明确后",
+        "acceptance": "明确已支持、未覆盖及后续安排。",
+        "refs": [
+          {
+            "path": "tasks/D1.md",
+            "match": "State: open",
+            "sha256": "cd1a1899cb104590a7cd844bcef441e595d6a7ed4c847b7d610d80568c579d3b"
+          },
+          {
+            "path": "tasks/S1.md",
+            "match": "State: open",
+            "sha256": "cd1a1899cb104590a7cd844bcef441e595d6a7ed4c847b7d610d80568c579d3b"
+          }
+        ]
+      }
+    ]
+  }
 }

@@ -8,6 +8,8 @@ This is a local Codex skill and a standalone Python renderer. It uses the Python
 
 ![Synthetic project overview](docs/images/overview.png)
 
+Version 1.1 adds an optional, evidence-backed five-part reporting preface on the **same homepage**, preserving every existing progress chart below it. A numbered right outline follows the content edge, stays vertically centered and highlights the current section. See the demo's `overview.json` and [report schema](references/schema.md); omit `report` to retain the developer overview. Missing schedule baselines or business measurements remain explicitly unknown.
+
 ## Features
 
 - Visual overview with stage navigation, task groups, acceptance checklists, activity distribution, and recent records.
